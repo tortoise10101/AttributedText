@@ -25,7 +25,7 @@ extension AttributedString {
     func addingURL(container: AttributeContainer) -> Self {
         var attributedString = self
         
-        let pattern = "(https?|ftp)(:\\/\\/[-_.!~*\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)"
+        let pattern = "(https?|ftp)(:\\/\\/[-_.!~*\\'()a-zA-Z0-9;\\/?:\\@&=+\\$,%#]+)"
         let regex = try! NSRegularExpression(pattern: pattern)
         let text = String(attributedString.characters)
         let matches = regex.matches(in: text, range: NSRange(text.startIndex..., in: text))
